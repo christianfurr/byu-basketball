@@ -1,6 +1,5 @@
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
-import bcrypt from "bcryptjs"
 import * as jose from 'jose'
 
 // Environment variables for authentication
@@ -27,7 +26,7 @@ export async function login(username: string, password: string) {
     }
 
     // Compare the entered password with the stored hash
-
+    const bcrypt = (await import("bcryptjs")).default
     const isMatch = await bcrypt.compare(password, ADMIN_CREDENTIALS.passwordHash)
 
     if (!isMatch) {
@@ -95,6 +94,7 @@ export async function requireAuth() {
 
 
 export async function hashPassword(password: string): Promise<string> {
+  const bcrypt = (await import("bcryptjs")).default
   const hash = await bcrypt.hash(password, AUTH_CONFIG.saltRounds)
   console.log(hash, AUTH_CONFIG.saltRounds)
   return hash
