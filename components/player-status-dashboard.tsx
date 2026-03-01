@@ -61,7 +61,7 @@ export function PlayerStatusDashboard({ players, depthChart }: PlayerStatusDashb
                   />
                   <div className="h-12 w-0.5 bg-gray-300 dark:bg-gray-700"></div>
                   <Image
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Big_12_logo_in_BYU_colors.svg/2560px-Big_12_logo_in_BYU_colors.svg.png"
+                    src="/images/big-12-byu.png"
                     alt="Big 12 Logo"
                     width={80}
                     height={40}
@@ -168,7 +168,7 @@ export function PlayerStatusDashboard({ players, depthChart }: PlayerStatusDashb
             />
             <div className="h-20 w-0.5 bg-white/30"></div>
             <Image
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Big_12_logo_in_BYU_colors.svg/2560px-Big_12_logo_in_BYU_colors.svg.png"
+              src="/images/big-12-byu.png"
               alt="Big 12 Logo"
               width={130}
               height={80}
@@ -222,7 +222,7 @@ export function PlayerStatusDashboard({ players, depthChart }: PlayerStatusDashb
             </div>
             <div className="flex items-center gap-3 w-1/3 justify-end">
               <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Big_12_logo_in_BYU_colors.svg/2560px-Big_12_logo_in_BYU_colors.svg.png"
+                src="/images/big-12-byu.png"
                 alt="Big 12 Logo"
                 width={isMobile ? 60 : isScrolled ? 60 : 70}
                 height={isMobile ? 30 : isScrolled ? 30 : 35}
